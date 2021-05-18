@@ -1,0 +1,67 @@
+.flex-container{
+    display: -webkit-flex;
+    -webkit-flex-direction:row;
+    display:flex;
+    flex-direction:row;
+    width:500px;
+    height:450px;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.card{
+    width:150px;
+    height:150px;
+    position:relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+}
+.front,
+.back{
+    height:100%;
+    width:100%;
+    text-align:center;
+    font-family: 'Merriweather', serif;
+    border-radius: 25px;
+    displey:flex;
+    justify-content: center;
+    align-items:center;
+    position:absolute;
+    transform-style: preserve-3d;
+}
+.front{
+    background:linear-gradient(cornflowerblue,yellow);
+    z-index:2;
+    backface-visibility: hidden;
+}
+.back{
+    background: linear-gradient(pink,lavender);
+    z-index:1;
+    transform: rotateY(180deg);
+}
+.card:hover{
+    transform: rotateY(180deg);
+}
+p{
+    margin-top:40px;
+}
+body{
+    background-color: antiquewhite;
+    background-image:url('volley.jpg') ;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%;
+    display: -webkit-flex;
+    -webkit-flex-direction:column;
+    display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+h1{
+    font-family: 'Merriweather', serif;
+}
+.flex-container{
+    perspective: 1000px;
+}
